@@ -1,13 +1,13 @@
-##This repository will analyze the DESRES SARS-CoV-2 main protease trajectory data
+## This repository will analyze the DESRES SARS-CoV-2 main protease trajectory data
 
 The trajectory is of the SARS-CoV-2 main protease dimer, which for most of the analysis here is analysied as two independent simulations of the monomer
 
 trajectory data can be downloaded here: http://www.deshawresearch.com/resources_sarscov2.html
 and is not included in this repository (warning trajectory is 11GB total)
 this trajectory data should be cited as
-	D. E. Shaw Research, "Molecular Dynamics Simulations Related to SARS-CoV-2," D. E. Shaw Research Technical Data, 2020. http://www.deshawresearch.com/resources_sarscov2.html
+    D. E. Shaw Research, "Molecular Dynamics Simulations Related to SARS-CoV-2," D. E. Shaw Research Technical Data, 2020. http://www.deshawresearch.com/resources_sarscov2.html
 
-##Scripts should be run in this order:
+## Scripts should be run in this order:
 
     distance_histogram_00.py
         |
