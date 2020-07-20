@@ -38,3 +38,12 @@ this trajectory data should be cited as:
     cluster_kmeans.py
 
     allostery_analysis
+
+## This analysis was performed with:
+Python 3.7.4  
+pyemma 2.5.7  
+mdtraj 1.9.3
+
+Allostery analysis uses:  
+mdentropy 0.4.0.dev0  
+enspara 0.1.0
