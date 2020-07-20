@@ -2,8 +2,7 @@
 
 The trajectory is of the SARS-CoV-2 main protease dimer, which for most of the analysis here is analysied as two independent simulations of the monomer
 
-trajectory data can be downloaded here: http://www.deshawresearch.com/resources_sarscov2.html
-
+trajectory data can be downloaded here: http://www.deshawresearch.com/resources_sarscov2.html  
 and is not included in this repository (warning trajectory is 11GB total)
 
 this trajectory data should be cited as:
