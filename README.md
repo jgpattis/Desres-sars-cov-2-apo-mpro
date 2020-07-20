@@ -2,7 +2,7 @@ This repository will analyze the DESRES SARS-CoV-2 protease data
 
 scripts should be run in this order:
 
-    distance_histogram_OO.py
+    distance_histogram_00.py
         |
          -> histogram_00
     filter_distance_01.py
