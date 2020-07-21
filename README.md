@@ -15,20 +15,22 @@ this trajectory data should be cited as:
 
     distance_histogram_00.py
         |
-         -> histogram_00
+         -> histogram_00/
     filter_distance_01.py
     filter_distance_01-1.py
+        |
+        -> filtered_distance_featurization_01/
     featurize_02.py
         |
-         -> feature_data_02
+         -> feature_data_02/
     feature_selection_03.py
     plot_vamp_score_04.py
     tica_05.py
         |
-         -> tica_data_05
+         -> tica_data_05/
     tica_plot_06.py
         |
-         -> tica_plots_06
+         -> tica_plots_06/
     mini_cluster.py
     pull_out_structure_07.py
 

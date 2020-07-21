@@ -12,7 +12,7 @@ from plot_structure_util import plot_vmd_cylinder_from_inds, plot_pymol_cylinder
 
 dis_cutoff = 1.2
 std_cutoff = 0.03
-outfile = 'filtered_dis_ind_12_03'
+outfile = 'filtered_distance_featurization_01/filtered_dis_ind_12_03'
 save = True
 plot = 'all'  # should be all, pymol, vmd, or none
 
