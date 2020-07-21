@@ -31,9 +31,10 @@ this trajectory data should be cited as:
     tica_plot_06.py
         |
          -> tica_plots_06/
-    mini_cluster.py
-    pull_out_structure_07.py
-
+    mini_cluster_07.py
+    pull_out_structure_08.py
+        |
+         -> structure_08/
     check_ergodic_08.py
     find_num_clusters_07.py
     plot_implied_timescales.py

@@ -17,8 +17,8 @@ pdb = '../DESRES_protease_chainid.pdb'
 # Define features
 def filtered_ca_distances(chain=0):
     ''' Pairwize filtered carbon alpha distances defined in filter_distances_01.py'''
-    dist_indsA = np.load(open("filtered_dis_ind_10_035_morechainA.npy","rb"))
-    dist_indsB = np.load(open("filtered_dis_ind_10_035_morechainB.npy","rb"))
+    dist_indsA = np.load(open("filtered_distance_featurization_01/filtered_dis_ind_10_035_morechainA.npy","rb"))
+    dist_indsB = np.load(open("filtered_distance_featurization_01/filtered_dis_ind_10_035_morechainB.npy","rb"))
     featurizer = coor.featurizer(pdb)
     if chain == 0:
         featurizer.add_distances(dist_indsA)
@@ -30,8 +30,8 @@ def filtered_ca_distances(chain=0):
 
 def filtered_ca_distances_larger(chain=0):
     ''' Pairwize filtered carbon alpha distances defined in filter_distances_01.py'''
-    dist_indsA = np.load(open("filtered_dis_ind_12_03chainA.npy","rb"))
-    dist_indsB = np.load(open("filtered_dis_ind_12_03chainA.npy","rb"))
+    dist_indsA = np.load(open("filtered_distance_featurization_01/filtered_dis_ind_12_03chainA.npy","rb"))
+    dist_indsB = np.load(open("filtered_distance_featurization_01/filtered_dis_ind_12_03chainA.npy","rb"))
     featurizer = coor.featurizer(pdb)
     if chain == 0:
         featurizer.add_distances(dist_indsA)
