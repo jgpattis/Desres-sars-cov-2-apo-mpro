@@ -35,12 +35,14 @@ this trajectory data should be cited as:
     pull_out_structure_08.py
         |
          -> structure_08/
-    check_ergodic_08.py
-    find_num_clusters_07.py
-    plot_implied_timescales.py
-    cluster_kmeans.py
+    find_num_clusters_09.py
+    cluster_kmeans_10.py
+        |
+        -> cluster_data_10/
+    check_ergodic_11.py
+    plot_implied_timescales_12.py
 
-    allostery_analysis
+    allostery_analysis/
 
 ## This analysis was performed with:
 Python 3.7.4  
