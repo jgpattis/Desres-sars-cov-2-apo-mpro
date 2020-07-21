@@ -8,7 +8,7 @@ import mdtraj as md
 import pyemma.coordinates as coor
 import numpy as np
 import pickle
-from plot_structure_util import plot_vmd_cylinder_from_inds, plot_pymol_cylinder_from_inds
+from util.plot_structure_util import plot_vmd_cylinder_from_inds, plot_pymol_cylinder_from_inds
 
 dis_cutoff = 1.2
 std_cutoff = 0.03
