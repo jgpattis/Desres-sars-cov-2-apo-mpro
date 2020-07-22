@@ -40,9 +40,13 @@ this trajectory data should be cited as:
         |
         -> cluster_data_10/
     check_ergodic_11.py
-    plot_implied_timescales_12.py
+    plot_implied_timescales_pyemma_12.py
+    plot_implied_timescales_enspara_12-1.py
+        |
+        -> implied_timescales-12/
 
     allostery_analysis/
+    cryptic_pockets/
 
 ## This analysis was performed with:
 Python 3.7.4  
@@ -51,4 +55,7 @@ mdtraj 1.9.3
 
 #### Allostery analysis uses:  
 mdentropy 0.4.0.dev0  
+enspara 0.1.0
+
+#### cryptic pockets uses:
 enspara 0.1.0
