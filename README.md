@@ -42,6 +42,7 @@ this trajectory data should be cited as:
     check_ergodic_11.py
     plot_implied_timescales_pyemma_12.py
     plot_implied_timescales_enspara_12-1.py
+    plot_impolied_timescales_msmb_12-2.py
         |
         -> implied_timescales-12/
 
