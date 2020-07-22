@@ -10,22 +10,22 @@ traj_list = [ traj_path + str(i) + '.dcd' for i in traj_num]
 pdb = '../../DESRES_protease_chainid.pdb'
 
 multi_traj = md.load(traj_list, stride=5, top=pdb)
-trj_a = multi_traj.atom_slice(multi_traj.topology.select('chainid == 0'))
-trj_b = multi_traj.atom_slice(multi_traj.topology.select('chainid == 1'))
-traj = md.join([trj_a, trj_b], check_topology=False)
+#traj = md.join(multi_traj)
+traj1 = traj[:-1]
+traj2 = traj[1:]
 
-dmi = mdentropy.metrics.DihedralMutualInformation(types=['phi', 'psi'], n_bins=3, method='knn', normed=True)
-out = dmi.partial_transform(traj)
+dte = mdentropy.metrics.DihedralTransferEntropy(types=['phi', 'psi'], n_bins=3, method='knn', normed=True)
+out = dte.partial_transform((traj1, traj1))
 
 print('entropy calulation is complete for backbone dihedral')
 print('output is ', out)
 
 p = pickle.HIGHEST_PROTOCOL
-with open('dmi_back_both_normed.pkl','wb') as handle:
-        pickle.dump(dmi, handle,protocol=p)
+with open('dtent_back_normed.pkl','wb') as handle:
+        pickle.dump(dte, handle,protocol=p)
 
-with open('dmi_back_outpu_both_normed.pkl','wb') as handle:
+with open('dtent_back_output_normed.pkl','wb') as handle:
         pickle.dump(out, handle,protocol=p)
 
 x = np.copy(out)
-np.savetxt('back_dmi_try2_normed.dat', x, fmt='%12.4f')
+np.savetxt('back_dtent_normed.dat', x, fmt='%12.4f')
