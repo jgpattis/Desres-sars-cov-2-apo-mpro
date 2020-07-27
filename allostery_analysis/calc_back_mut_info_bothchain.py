@@ -21,11 +21,11 @@ print('entropy calulation is complete for backbone dihedral')
 print('output is ', out)
 
 p = pickle.HIGHEST_PROTOCOL
-with open('dmi_back_both_normed.pkl','wb') as handle:
+with open('output/dmi_back_both_normed.pkl','wb') as handle:
         pickle.dump(dmi, handle,protocol=p)
 
-with open('dmi_back_outpu_both_normed.pkl','wb') as handle:
+with open('output/dmi_back_outpu_both_normed.pkl','wb') as handle:
         pickle.dump(out, handle,protocol=p)
 
 x = np.copy(out)
-np.savetxt('back_dmi_try2_normed.dat', x, fmt='%12.4f')
+np.savetxt('output/back_dmi_try2_normed.dat', x, fmt='%12.4f')

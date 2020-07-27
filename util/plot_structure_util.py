@@ -5,12 +5,11 @@ import numpy as np
 import mdtraj as md
 
 
-def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False, matrix=False):
+def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False):
     '''writes a tcl file which can draw cylinders in vmd
     structure file should be pdb
     inds should be 0 indexed atom indicies
-    or if residue = True residue sequence (generally 1-based, but depends on topology)
-    if matrix=true inds can be a matrix
+    or if residue = True 0 indexed residue indicie
 
     instructuns:
     1. open structure_file in vmd
@@ -30,21 +29,13 @@ def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False, ma
         f = open(outname + '.tcl','w')
     f.write('set center {0 0 0}\n')
     f.write('draw color blue\n')
-    if matrix == True:
-        loop = inds[0]
-    else:
-        loop = inds
 
-    for i in range(len(loop)):
-        if matrix == True:
-            j = inds[0][i]
-            k = inds[1][i]
-        else:
-            j = inds[i,0]
-            k = inds[i,1]
+    for i in range(len(inds)):
+        j = inds[i,0]
+        k = inds[i,1]
         if residue == True:
-            l = top.select('resSeq ' + str(j) + ' and name CA')
-            m = top.select('resSeq ' + str(k) + ' and name CA')
+            l = top.select('resid ' + str(j) + ' and name CA')
+            m = top.select('resid ' + str(k) + ' and name CA')
             n = first_frame[0,l,:] * 10
             o = first_frame[0,m,:] * 10
         else:
