@@ -36,8 +36,10 @@ def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False):
         if residue == True:
             l = top.select('resid ' + str(j) + ' and name CA')
             m = top.select('resid ' + str(k) + ' and name CA')
-            n = first_frame[0,l,:] * 10
-            o = first_frame[0,m,:] * 10
+            n1 = first_frame[0,l,:] * 10
+            o1 = first_frame[0,m,:] * 10
+            n = n1[0]
+            o = o1[0]
         else:
             n = first_frame[0,j,:] * 10
             o = first_frame[0,k,:] * 10
@@ -48,12 +50,11 @@ def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False):
 
     f.close()
 
-def plot_pymol_cylinder_from_inds(structure_file, inds, outname, residue=False, matrix=False):
+def plot_pymol_cylinder_from_inds(structure_file, inds, outname, residue=False):
     '''writes a python file which can draw cylinders in pymol
     structure file should be pdb
     inds should be 0 indexed atom indicies
-    or if residue = True residue sequence (generally 1-based, but depends on topology)
-    if matrix=true inds can be a matrix
+    or if residue = True 0 indexed residue indicie
 
     instructuns:
     1. open pymol
@@ -75,23 +76,17 @@ def plot_pymol_cylinder_from_inds(structure_file, inds, outname, residue=False, 
     f.write("cmd.show('cartoon')\n")
     f.write('obj=[]\n')
 
-    if matrix == True:
-        loop = inds[0]
-    else:
-        loop = inds
 
-    for i in range(len(loop)):
-        if matrix == True:
-            j = inds[0][i]
-            k = inds[1][i]
-        else:
-            j = inds[i,0]
-            k = inds[i,1]
+    for i in range(len(inds)):
+        j = inds[i,0]
+        k = inds[i,1]
         if residue == True:
-            l = top.select('resSeq ' + str(j) + ' and name CA')
-            m = top.select('resSeq ' + str(k) + ' and name CA')
-            n = first_frame[0,l,:] * 10
-            o = first_frame[0,m,:] * 10
+            l = top.select('resid ' + str(j) + ' and name CA')
+            m = top.select('resid ' + str(k) + ' and name CA')
+            n1 = first_frame[0,l,:] * 10
+            o1 = first_frame[0,m,:] * 10
+            n = n1[0]
+            o = o1[0]
         else:
             n = first_frame[0,j,:] * 10
             o = first_frame[0,k,:] * 10
