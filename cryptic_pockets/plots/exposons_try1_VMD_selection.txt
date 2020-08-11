@@ -1,0 +1,22 @@
+#selection strings to highlight exposons in VMD
+
+(residue 47 or residue 138 or residue 166 or residue 213 or residue 323 or residue 326 or residue 327 or residue 345 or residue 351 or residue 355 or residue 359 or residue 362 or residue 368 or residue 371 or residue 389 or residue 400 or residue 404 or residue 406 or residue 413 or residue 432 or residue 433 or residue 434 or residue 438 or residue 439 or residue 441 or residue 444 or residue 449 or residue 473 or residue 475 or residue 478 or residue 485 or residue 489 or residue 490 or residue 491 or residue 492 or residue 493 or residue 496 or residue 497 or residue 501 or residue 543 or residue 545 or residue 546 or residue 548 or residue 594) and sidechain
+
+(residue 21 or residue 25 or residue 26 or residue 107 or residue 118 or residue 142 or residue 143 or residue 144 or residue 155 or residue 162 or residue 165 or residue 171 or residue 182 or residue 187 or residue 282 or residue 303 or residue 347 or residue 363 or residue 370 or residue 425 or residue 436 or residue 442 or residue 447 or residue 495 or residue 504 or residue 505 or residue 530 or residue 536 or residue 538 or residue 539 or residue 544 or residue 557 or residue 577 or residue 598 or residue 602) and sidechain
+
+(residue 0 or residue 7 or residue 11 or residue 46 or residue 151 or residue 154 or residue 181 or residue 188 or residue 191 or residue 251 or residue 255 or residue 257 or residue 296 or residue 297 or residue 298 or residue 300 or residue 301 or residue 304 or residue 324 or residue 353 or residue 374 or residue 426 or residue 427 or residue 428) and sidechain
+
+(residue 50 or residue 102 or residue 119 or residue 293 or residue 302 or residue 305 or residue 328 or residue 330 or residue 331 or residue 332 or residue 346 or residue 352 or residue 354 or residue 424 or residue 448 or residue 450 or residue 468 or residue 488 or residue 494 or residue 523 or residue 554 or residue 591) and sidechain
+
+(residue 131 or residue 132 or residue 134 or residue 153 or residue 168 or residue 169 or residue 170 or residue 184 or residue 192 or residue 193 or residue 194 or residue 197 or residue 198 or residue 224 or residue 232 or residue 241 or residue 256 or residue 271 or residue 306) and sidechain
+
+(residue 8 or residue 18 or residue 68 or residue 70 or residue 110 or residue 120 or residue 121 or residue 214 or residue 317 or residue 322 or residue 333 or residue 358 or residue 460 or residue 461 or residue 606 or residue 607) and sidechain
+
+(residue 122 or residue 140 or residue 141 or residue 308 or residue 313 or residue 457 or residue 561 or residue 563 or residue 599 or residue 603 or residue 609 or residue 610) and sidechain
+
+(residue 22 or residue 44 or residue 45 or residue 49 or residue 51 or residue 53 or residue 56 or residue 60 or residue 384 or residue 547 or residue 608) and sidechain
+
+(residue 190 or residue 348 or residue 349 or residue 350 or residue 356 or residue 357 or residue 366 or residue 382 or residue 385 or residue 387 or residue 397) and sidechain
+
+(residue 125 or residue 126 or residue 127 or residue 128 or residue 135 or residue 136 or residue 289 or residue 309 or residue 310 or residue 519 or residue 588) and sidechain
+

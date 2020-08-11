@@ -1,5 +1,7 @@
 import numpy as np
 import mdtraj as md
+import os
+import shutil
 
 def check_iter_of_sequences(sequences, allow_trajectory=False, ndim=2,
                             max_iter=None):
@@ -162,3 +164,26 @@ class KDTree(object):
             mapping[start:end, 0] = traj_i
             mapping[start:end, 1] = np.arange(end - start)
         return mapping[concat_inds]
+
+def backup(fn):
+    """If ``fn`` exists, rename it and issue a warning
+    This function will rename an existing filename {fn}.bak.{i} where
+    i is the smallest integer that gives a filename that doesn't exist.
+    This naively uses a while loop to find such a filename, so there
+    shouldn't be too many existing backups or performance will degrade.
+    Parameters
+    ----------
+    fn : str
+        The filename to check.
+    """
+    if not os.path.exists(fn):
+        return
+
+    backnum = 1
+    backfmt = "{fn}.bak.{backnum}"
+    trial_fn = backfmt.format(fn=fn, backnum=backnum)
+    while os.path.exists(trial_fn):
+        backnum += 1
+        trial_fn = backfmt.format(fn=fn, backnum=backnum)
+
+    shutil.move(fn, trial_fn)
