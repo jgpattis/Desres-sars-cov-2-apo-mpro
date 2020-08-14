@@ -17,7 +17,7 @@ lags = [2,4,6,8,10,12,16,24,32,48,64,80]
 def norm_pseudo(C, prior_counts=1/ n_clusters, calculate_eq_probs=True):
     return msm.builders.normalize(C, prior_counts=prior_counts, calculate_eq_probs=calculate_eq_probs)
 
-its1 = msm.timescales.implied_timescales(np.array(dt3), lags, msm.builders.normalize, n_times=8)
+its1 = msm.timescales.implied_timescales(np.array(dt3), lags, norm_pseudo, n_times=8)
 
 fig, ax = plt.subplots()
 for i in range(8):
@@ -26,4 +26,4 @@ ax.plot(lags,lags, linestyle='dashed', linewidth=2, color='k')
 ax.set_yscale('log')
 ax.set_xlabel('Lag time (ns)')
 ax.set_ylabel('Implied Timescales (ns)')
-fig.savefig(f'implied_timescales_12/{sys}_implied_timescale_enspara_norm_more3.pdf')
+fig.savefig(f'implied_timescales_12/{sys}_implied_timescale_enspara_norm_pseudo_more3.pdf')
