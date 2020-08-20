@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-system = 'dmi'
+system = 'dtent'
 
 labels_file = f'protease_residue_labels_{system}.npy'
 out = f'{system}.npy'
@@ -16,7 +16,7 @@ out000 = np.copy(out00)
 
 #out000 -= out000.diagonal() * np.eye(*out000.shape)
 
-out000[out000 < 0.05] = np.nan
+out000[out000 < 0.025] = np.nan
 
 minr = labels.min()
 maxr = labels.max()

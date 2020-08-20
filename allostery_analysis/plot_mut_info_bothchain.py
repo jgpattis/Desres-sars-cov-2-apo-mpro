@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-system = 'dmi'
+system = 'dmi_bothchain'
 
 labels_file = f'protease_residue_labels_{system}.npy'
 out = f'{system}.npy'
