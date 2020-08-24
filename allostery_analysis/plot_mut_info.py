@@ -1,5 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("../")
+from util.plot_structure_util import plot_vmd_cylinder_from_inds
 
 system = 'dmi'
 
@@ -29,3 +32,16 @@ cb.set_label('Log(MI)', fontsize=16)
 plt.tight_layout()
 plt.savefig(out_name + '_matrix.' + o_type)
 plt.clf()
+
+pdb = '../../DESRES_protease_chainid.pdb'
+out000 -= out000.diagonal() * np.eye(*out000.shape)
+
+result = np.transpose(np.where(out000 > 0.35))
+print('number of cylinders drawn is: ', result.shape[0])
+
+plot_vmd_cylinder_from_inds(pdb, result, f'plots/{system}_over35', residue=True, color='red', width=5)
+
+result1 = np.transpose(np.where((0.35 > out000) & (out000 > 0.15)))
+print('number of cylinders drawn is: ', result1.shape[0])
+
+plot_vmd_cylinder_from_inds(pdb, result1, f'plots/{system}_over15', residue=True, width=5)
