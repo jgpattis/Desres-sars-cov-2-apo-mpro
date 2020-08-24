@@ -1,0 +1,3 @@
+set center {0 0 0}
+draw color red 
+graphics top line { 10.8210 -12.0140 -10.0210 } { 10.2770 -14.4330 -7.0560 } width 3 style solid [[ 10.821 -12.014 -10.021]]graphics top line { 10.2770 -14.4330 -7.0560 } { 10.8210 -12.0140 -10.0210 } width 3 style solid [[ 10.276999 -14.433001  -7.056   ]]graphics top line { -10.6150 -11.7150 9.9800 } { -10.2150 -14.3490 7.1790 } width 3 style solid [[-10.615     -11.715       9.9800005]]graphics top line { -10.2150 -14.3490 7.1790 } { -10.6150 -11.7150 9.9800 } width 3 style solid [[-10.215    -14.349001   7.179   ]]
