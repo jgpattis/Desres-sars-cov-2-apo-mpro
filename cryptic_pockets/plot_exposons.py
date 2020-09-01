@@ -44,7 +44,7 @@ def print_vmd_string(inds):
     string = f'(residue {inds[0]}'
     for i in range(1, len(inds)):
         string = string + f' or residue {inds[i]}'
-    return string + ') and sidechain'
+    return string + ') and (sidechain or type CA)'
 
 unique, un_inds, un_counts = np.unique(exp, return_index=True, return_counts=True)
 order = np.argsort(un_counts)
