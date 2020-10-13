@@ -1,0 +1,3 @@
+[submodule "DESRES_protease_manuscript"]
+	path = DESRES_protease_manuscript
+	url = https://github.com/jgpattis/DESRES_protease_manuscript.git
