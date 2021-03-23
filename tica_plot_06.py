@@ -11,8 +11,8 @@ import pandas as pd
 import pyemma.plots as pyemma_plots
 import matplotlib.pyplot as plt
 
-sys = 'tica_plots_06/chi2/chi2'   ## What tica data do you want to look at
-tica_data = coor.load('tica_data_05/chi2_tica_data.h5')  ## Where is that tica data?
+sys = 'tica_plots_06/fdis/fdis'   ## What tica data do you want to look at
+tica_data = coor.load('tica_data_05/fdis_tica_data.h5')  ## Where is that tica data?
 tica_data_cat = np.concatenate(tica_data)
 
 def kin_var_plot():
@@ -49,12 +49,12 @@ def colorTIME(tica_data_cat=tica_data_cat, ic2=1, stride=2):
     mid = int(len(tica_data_cat)/2)
     print(mid)
     cbb = ax1.scatter(tica_data_cat[:mid:stride,0], tica_data_cat[:mid:stride,ic2], c=time_us[::stride])
-    ax1.scatter(tica_data_cat[0,0], tica_data_cat[0,ic2], marker='x', s=200, c='k')
+    ax1.scatter(tica_data_cat[0,0], tica_data_cat[0,ic2], marker='x', s=200, c='r')
     ax1.set_xlabel(f'IC 1', fontsize=16)
     ax1.set_ylabel(f'IC {ic2 + 1}', fontsize=16)
     ax1.set_title('Chain A', fontsize=18)
     cb = ax2.scatter(tica_data_cat[mid::stride,0], tica_data_cat[mid::stride,ic2], c=time_us[::stride])
-    ax2.scatter(tica_data_cat[0,0], tica_data_cat[0,ic2], marker='x', s=200, c='k')
+    ax2.scatter(tica_data_cat[0,0], tica_data_cat[0,ic2], marker='x', s=200, c='r')
     ax2.set_xlabel(f'IC 1', fontsize=16)
     ax2.set_title('Chain B', fontsize=18)
     cb2 = fig.colorbar(cbb, ax=ax1)
@@ -93,9 +93,11 @@ fig4, ax4 = heatmap(tica_data_cat=tica_data_cat, ic2=3)
 fig4.savefig(sys + 'heatmap_ic4.pdf')
 
 fig5, (ax51, ax52) = colorTIME(tica_data_cat=tica_data_cat, ic2=1)
+fig5.savefig('DESRES_protease_manuscript/figures/fig_1_fdiscolortime_ic2.pdf')
 fig5.savefig(sys + 'colortime_ic2.pdf')
 
 fig6, (ax61, ax62) = colorTIME(tica_data_cat=tica_data_cat, ic2=2)
+fig6.savefig('DESRES_protease_manuscript/figures/fig_4_fdiscolortime_ic3.pdf')
 fig6.savefig(sys + 'colortime_ic3.pdf')
 
 fig7, (ax71, ax72) = colorTIME(tica_data_cat=tica_data_cat, ic2=3)
