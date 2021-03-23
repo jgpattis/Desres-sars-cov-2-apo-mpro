@@ -36,12 +36,12 @@ plt.clf()
 pdb = '../../DESRES_protease_chainid.pdb'
 out000 -= out000.diagonal() * np.eye(*out000.shape)
 
-result = np.transpose(np.where(out000 > 0.35))
+result = np.transpose(np.where(out000 > 0.33))
 print('number of cylinders drawn is: ', result.shape[0])
 
-plot_vmd_cylinder_from_inds(pdb, result, f'plots/{system}_over35', residue=True, color='red', width=5)
+plot_vmd_cylinder_from_inds(pdb, result, f'plots/{system}_over33', residue=True, color='red', width=5)
 
-result1 = np.transpose(np.where((0.35 > out000) & (out000 > 0.15)))
+result1 = np.transpose(np.where((0.33 > out000) & (out000 > 0.13)))
 print('number of cylinders drawn is: ', result1.shape[0])
 
-plot_vmd_cylinder_from_inds(pdb, result1, f'plots/{system}_over15', residue=True, width=5)
+plot_vmd_cylinder_from_inds(pdb, result1, f'plots/{system}_over13', residue=True, width=5)

@@ -12,7 +12,7 @@ exp = np.load(open(exp_name,"rb"))
 
 
 non_pocket = 1
-pockets = 6
+pockets = 4
 
 unique, un_inds, un_counts = np.unique(exp, return_index=True, return_counts=True)
 order = np.argsort(un_counts)
@@ -75,4 +75,4 @@ fig, ax = plt.subplots()
 nx.draw(graph, pos=pos, node_color=node_color, arrows=False,
                      node_size=node_size, ax=ax, with_labels=True)
 
-fig.savefig('exposon_network_try12.pdf')
+fig.savefig('exposon_network_try13.pdf')

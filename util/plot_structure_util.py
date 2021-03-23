@@ -5,7 +5,7 @@ import numpy as np
 import mdtraj as md
 
 
-def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False, color='blue'):
+def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False, color='blue', width=3):
     '''writes a tcl file which can draw cylinders in vmd
     structure file should be pdb
     inds should be 0 indexed atom indicies
@@ -49,7 +49,7 @@ def plot_vmd_cylinder_from_inds(structure_file, inds, outname, residue=False, co
         else:
             n = first_frame[0,j,:] * 10
             o = first_frame[0,k,:] * 10
-        f.write(f'graphics top line {start} {n[0]:.4f} {n[1]:.4f} {n[2]:.4f} {end} {start} {o[0]:.4f} {o[1]:.4f} {o[2]:.4f} {end} width 3 style solid {bk}' )
+        f.write(f'graphics top line {start} {n[0]:.4f} {n[1]:.4f} {n[2]:.4f} {end} {start} {o[0]:.4f} {o[1]:.4f} {o[2]:.4f} {end} width {width} style solid {bk}' )
 
     f.close()
 

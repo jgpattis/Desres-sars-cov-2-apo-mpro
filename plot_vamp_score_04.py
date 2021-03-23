@@ -34,3 +34,4 @@ else:
     plot_vamp_score(axes, scores, errors, lags=[2, 8, 16], labels=labels)
 fig.tight_layout()
 fig.savefig(outfile)
+fig.savefig('DESRES_protease_manuscript/supplemental_figures/sup_fig_2' + outfile)
