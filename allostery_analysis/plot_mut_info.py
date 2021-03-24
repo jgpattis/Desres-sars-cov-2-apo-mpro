@@ -31,6 +31,7 @@ plt.ylabel('Residue Number', fontsize=16)
 cb.set_label('Log(MI)', fontsize=16)
 plt.tight_layout()
 plt.savefig(out_name + '_matrix.' + o_type)
+plt.savefig('../DESRES_protease_manuscript/raw_figures/dmi_matrix.pdf')
 plt.clf()
 
 pdb = '../../DESRES_protease_chainid.pdb'
